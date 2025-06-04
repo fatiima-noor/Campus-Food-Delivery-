@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Your Cart";
+}
+
+<div class="min-h-screen bg-gray-100 p-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Your Cart 🛒</h2>
+
+            @if (Model.Items.Count == 0)
+            {
+                <p class="text-xl text-gray-700">Your cart is empty.</p>
+            }
+            else
+            {
+                <div class="space-y-4">
+                    @foreach (var item in Model.Items)
+                    {
+                        <div class="flex justify-between items-center">
+                            <p class="text-lg font-semibold text-gray-800">@item.Name</p>
+                            <p class="text-xl font-bold text-gray-800">@item.Quantity x $@item.Price</p>
+                        </div>
+                    }
+                </div>
+                <div class="mt-6">
+                    <p class="text-xl font-semibold text-gray-800">Total: $@Model.TotalPrice</p>
+                    <button class="mt-4 w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">Proceed to Checkout</button>
+                </div>
+            }
+        </div>
+    </div>
+</div>

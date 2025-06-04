@@ -1,0 +1,55 @@
+﻿@{
+    ViewData["Title"] = "Manage Food Items";
+}
+
+<div class="min-h-screen bg-gray-100 p-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">Manage Food Items</h2>
+
+            <!-- Example of a Food Item List -->
+            <div class="space-y-4">
+                <!-- List of food items (static for now) -->
+                <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">Burger</h4>
+                        <p class="text-sm text-gray-600">A delicious cheeseburger with all the fixings.</p>
+                        <p class="text-xl font-bold text-gray-800 mt-2">$5.99</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="#" class="bg-yellow-500 text-white py-1 px-3 rounded hover:bg-yellow-600 transition">
+                            Edit
+                        </a>
+                        <a href="#" class="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600 transition">
+                            Delete
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Add more food items here in similar format -->
+                <div class="flex justify-between items-center p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div>
+                        <h4 class="text-lg font-semibold text-gray-800">Pizza</h4>
+                        <p class="text-sm text-gray-600">A tasty pepperoni pizza with a crispy crust.</p>
+                        <p class="text-xl font-bold text-gray-800 mt-2">$8.99</p>
+                    </div>
+                    <div class="flex space-x-2">
+                        <a href="#" class="bg-yellow-500 text-white py-1 px-3 rounded hover:bg-yellow-600 transition">
+                            Edit
+                        </a>
+                        <a href="#" class="bg-red-500 text-white py-1 px-3 rounded hover:bg-red-600 transition">
+                            Delete
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button to Add New Food Item -->
+            <div class="mt-6">
+                <a href="@Url.Action("AddFoodItem", "Staff")" class="w-full bg-blue-500 text-white py-2 rounded hover:bg-blue-600 transition">
+                    Add New Food Item
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

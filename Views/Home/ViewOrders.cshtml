@@ -1,0 +1,62 @@
+﻿@{
+    ViewData["Title"] = "View Orders";
+}
+
+<div class="min-h-screen bg-gray-100 p-6">
+    <div class="max-w-7xl mx-auto">
+        <div class="bg-white rounded-lg shadow-md p-6">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6">View Orders</h2>
+
+            <!-- Example of Order List -->
+            <div class="space-y-4">
+                <!-- Order 1 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Order #001</h4>
+                            <p class="text-sm text-gray-600">Customer: John Doe</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">Total: $15.98</p>
+                            <p class="text-sm text-gray-500">Status: Pending</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="font-medium text-gray-700">Items:</p>
+                        <ul class="list-disc pl-5">
+                            <li>Burger - $5.99</li>
+                            <li>Pizza - $8.99</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Order 2 -->
+                <div class="p-4 bg-gray-50 rounded-lg shadow-sm">
+                    <div class="flex justify-between items-center">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-800">Order #002</h4>
+                            <p class="text-sm text-gray-600">Customer: Jane Smith</p>
+                        </div>
+                        <div>
+                            <p class="text-lg font-semibold text-gray-800">Total: $9.99</p>
+                            <p class="text-sm text-gray-500">Status: Pending</p>
+                        </div>
+                    </div>
+                    <div class="mt-4">
+                        <p class="font-medium text-gray-700">Items:</p>
+                        <ul class="list-disc pl-5">
+                            <li>Pizza - $8.99</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Button to Mark Orders as Complete (if necessary) -->
+            <div class="mt-6">
+                <button class="w-full bg-green-500 text-white py-2 rounded hover:bg-green-600 transition">
+                    Mark Orders as Complete
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

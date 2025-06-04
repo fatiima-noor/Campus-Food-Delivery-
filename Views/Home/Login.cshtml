@@ -1,0 +1,133 @@
+﻿@{
+    ViewData["Title"] = "Login / Signup";
+}
+<div class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 p-4">
+    <div class="bg-white rounded-xl shadow-xl w-full max-w-3xl p-8 border border-gray-100">
+        <div class="text-center mb-8">
+            <h1 class="text-3xl font-bold text-gray-800">Welcome Back</h1>
+            <p class="text-gray-500 mt-2">Please login or create an account to continue</p>
+        </div>
+
+        <div class="flex justify-center mb-8">
+            <div class="inline-flex bg-gray-100 p-1 rounded-lg">
+                <button onclick="showForm('login')" class="px-6 py-2 rounded-md font-medium transition-all duration-200" id="loginTab">Login</button>
+                <button onclick="showForm('signup')" class="px-6 py-2 rounded-md font-medium transition-all duration-200" id="signupTab">Signup</button>
+            </div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="loginForm" class="transition-all duration-300">
+            <form>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                        </div>
+                        <input type="email" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Enter your email" />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <div class="flex items-center justify-between mb-2">
+                        <label class="block text-gray-700 text-sm font-medium">Password</label>
+                        <a href="#" class="text-sm font-medium text-blue-600 hover:text-blue-800">Forgot password?</a>
+                    </div>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="password" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Enter your password" />
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">Login</button>
+
+                <div class="mt-6 text-center">
+                    <p class="text-gray-600">Don't have an account? <a href="#" onclick="showForm('signup'); return false;" class="text-blue-600 font-medium hover:underline">Sign up</a></p>
+                </div>
+            </form>
+        </div>
+
+        <!-- Signup Form (Initially Hidden) -->
+        <div id="signupForm" class="hidden transition-all duration-300">
+            <form>
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Full Name</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="text" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Your full name" />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                            </svg>
+                        </div>
+                        <input type="email" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Your email" />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 text-sm font-medium mb-2">Password</label>
+                    <div class="relative">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <svg class="h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd" />
+                            </svg>
+                        </div>
+                        <input type="password" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all" placeholder="Choose a password" />
+                    </div>
+                </div>
+
+                <button type="submit" class="w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-medium hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg">Create Account</button>
+
+                <div class="mt-6 text-center">
+                    <p class="text-gray-600">Already have an account? <a href="#" onclick="showForm('login'); return false;" class="text-blue-600 font-medium hover:underline">Log in</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        function showForm(form) {
+            const loginTab = document.getElementById("loginTab");
+            const signupTab = document.getElementById("signupTab");
+            const loginForm = document.getElementById("loginForm");
+            const signupForm = document.getElementById("signupForm");
+
+            if (form === "login") {
+                loginForm.classList.remove("hidden");
+                signupForm.classList.add("hidden");
+                loginTab.classList.add("bg-blue-600", "text-white");
+                signupTab.classList.remove("bg-blue-600", "text-white");
+            } else {
+                signupForm.classList.remove("hidden");
+                loginForm.classList.add("hidden");
+                signupTab.classList.add("bg-blue-600", "text-white");
+                loginTab.classList.remove("bg-blue-600", "text-white");
+            }
+        }
+
+        // Initialize the form
+        document.addEventListener("DOMContentLoaded", function() {
+            showForm('login');
+        });
+    </script>
+}
